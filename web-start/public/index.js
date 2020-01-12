@@ -27,7 +27,7 @@ function updateDays() {
    console.log(error);
   });
 
-  confirmation.innerHTML = "Great! If you don't exercise in " + numDays.value + ", we will post on your Twitter feed!";
+  confirmation.innerHTML = "Great! If you don't exercise in " + numDays.value + " days, we will post on your Twitter feed!";
   numDays.value = "";
 }
 
