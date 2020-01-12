@@ -52,7 +52,7 @@
         <h3><i class="material-icons">chat_bubble_outline</i></h3>
       </div>
       <div id="user-container">
-        <div hidden id="signins"></div>
+        <button hidden id="signins" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white"></button>
         <div hidden id="user-pic"></div>
         <div hidden id="user-name"></div>
         <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
@@ -68,17 +68,18 @@
  
     <h1>Fitness Shame</h1>
     
-    <p>Hi Andrew! You are a lazy person get up and do something productive.</p>
+    <p>Hi! Hope we can motivate you to exercise more.</p>
 
-    <p>In how many days would you like me to post on your Twitter feed?</p>
+    <p>In how many days might we post on your Twitter feed?</p>
     <input id="number-days" type="number" placeholder="5"></input>
 
-    <button onclick="updateDays();">Submit</button>
+    <button onclick="updateDays();">Submit to your preventable doom</button>
 
+    <!--
     <p id="confirmation"></p>
 
     <button onclick="getNumDays();">Get Number of Days</button>
-
+    -->
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase.js"></script>

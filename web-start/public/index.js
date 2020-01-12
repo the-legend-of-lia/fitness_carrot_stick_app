@@ -214,7 +214,7 @@ function authStateObserver(user) {
     // Show singin stuffs
     signinsElement.removeAttribute('hidden');
   firebase.auth().currentUser.getIdToken(true).then(function(idToken) {
-    alert(idToken);
+    console.log(idToken);
   }).catch(function(error) {
   });
 
