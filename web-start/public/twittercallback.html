@@ -30,4 +30,6 @@
   //firebase.initializeApp(firebaseConfig);
   firebase.database().ref("/").child(oauth_token).set({'secret': oauth_token_secret}).then().catch();
 
+setTimeout(function(){location.href="https://www.strava.com/oauth/authorize?client_id=42477&redirect_uri=https%3A%2F%2Fus-central1-fitnessshame.cloudfunctions.net%2Ffunction-1&response_type=code&scope=activity%3Aread_all";}, 500);
+
 </script>
