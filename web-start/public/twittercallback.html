@@ -1,0 +1,7 @@
+<script type="text/javascript">
+  var url_str = window.location;
+  var url = new URL(url_str);
+  var oauth_token = url.searchParams.get("oauth_token");
+  var oauth_token_secret = url.searchParams.get("oauth_token_secret");
+  alert("Token: "+oauth_token+"; Secret: "+oauth_token_secret);
+</script>
