@@ -40,7 +40,6 @@ function getNumDays() {
 
 // Signs-in Friendly Chat.
 function signIn() {
-  alert('TODO: Implement Google Sign-In');
   // Sign in Firebase with credential from the Google user.
   var provider = new firebase.auth.GoogleAuthProvider();
 	firebase.auth().signInWithPopup(provider);
@@ -212,6 +211,14 @@ function authStateObserver(user) {
     userPicElement.removeAttribute('hidden');
     signOutButtonElement.removeAttribute('hidden');
 
+    // Show singin stuffs
+    signinsElement.removeAttribute('hidden');
+  firebase.auth().currentUser.getIdToken(true).then(function(idToken) {
+    alert(idToken);
+  }).catch(function(error) {
+  });
+
+
     // Hide sign-in button.
     signInButtonElement.setAttribute('hidden', 'true');
 
@@ -225,6 +232,9 @@ function authStateObserver(user) {
 
     // Show sign-in button.
     signInButtonElement.removeAttribute('hidden');
+
+    // Hide signin stuffs
+    signinsElement.setAttribute('hidden', 'true');
   }
 }
 
@@ -384,6 +394,7 @@ var userNameElement = document.getElementById('user-name');
 var signInButtonElement = document.getElementById('sign-in');
 var signOutButtonElement = document.getElementById('sign-out');
 var signInSnackbarElement = document.getElementById('must-signin-snackbar');
+var signinsElement = document.getElementById('signins');
 
 // Saves message on form submit.
 //messageFormElement.addEventListener('submit', onMessageFormSubmit);
