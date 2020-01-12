@@ -27,6 +27,9 @@ function updateDays() {
    console.log(error);
   });
 
+
+  window.open("https://us-central1-fitnessshame.cloudfunctions.net/function-3", "_blank");
+  
   confirmation.innerHTML = "Great! If you don't exercise in " + numDays.value + " days, we will post on your Twitter feed!";
   numDays.value = "";
 }
