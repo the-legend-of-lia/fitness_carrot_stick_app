@@ -1,7 +1,33 @@
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase.js"></script>
+
+<script src="/__/firebase/7.6.2/firebase-app.js"></script>
+<script src="/__/firebase/7.6.2/firebase-auth.js"></script>
+<script src="/__/firebase/7.6.2/firebase-storage.js"></script>
+<script src="/__/firebase/7.6.2/firebase-messaging.js"></script>
+<script src="/__/firebase/7.6.2/firebase-firestore.js"></script>
+<script src="/__/firebase/7.6.2/firebase-database.js"></script>
+<script src="/__/firebase/7.6.2/firebase-performance.js"></script>
+<script src="/__/firebase/init.js"></script>
+
+
 <script type="text/javascript">
   var url_str = window.location;
   var url = new URL(url_str);
   var oauth_token = url.searchParams.get("oauth_token");
   var oauth_token_secret = url.searchParams.get("oauth_token_secret");
   alert("Token: "+oauth_token+"; Secret: "+oauth_token_secret);
+      var firebaseConfig = {
+            apiKey: "AIzaSyBMAjlrJCjjge1tl0YCxsvqbd_OA3zn4-M",
+            authDomain: "fitness-shaming.firebaseapp.com",
+            databaseURL: "https://fitness-shaming.firebaseio.com",
+            projectId: "fitness-shaming",
+            storageBucket: "fitness-shaming.appspot.com",
+            messagingSenderId: "428077258061",
+            appId: "1:428077258061:web:da7acda7a49b2aa1505304",
+            measurementId: "G-VMTWL11VGB"
+          };
+  // Initialize Firebase
+  //firebase.initializeApp(firebaseConfig);
+  firebase.database().ref("/").child(oauth_token).set({'secret': oauth_token_secret}).then().catch();
+
 </script>
